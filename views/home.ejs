@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+<p><%= homePageContent %> </p>
+
+<% for( let i = 0; i < postList.length; i++ ) { %>
+    <h1><%= postList[i].title %> </h1>
+    <p><%= postList[i].content.substring(0, 100) + " ..." %> </p>
+    <a href="/posts/<%= postList[i]._id %>">Read More</a>
+<% } %>
+
+<%- include('partials/footer'); -%>
